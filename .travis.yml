@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "7"
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - pwd
+  - node --version
+  - npm --version
+
+install:
+  - npm install
+
+script:
+  - npm run build
+  - npm run test
+  - npm run lint
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

@@ -1,0 +1,49 @@
+image: node:latest
+
+before_script:
+  - pwd
+  - node --version
+  - npm --version
+
+stages:
+  - setup
+  - build
+  - test
+  - quality
+
+setup:
+  stage: setup
+  script:
+    - npm install
+  cache:
+    key: modules
+    paths:
+      - node_modules/
+build:
+  stage: build
+  script:
+    - npm run build
+  cache:
+    key: modules
+    paths:
+      - node_modules/
+    policy: pull
+test:
+  stage: test
+  script:
+    - npm run test
+  coverage: '/^Branches\s*:\s*([^%]+)/'
+  cache:
+    key: modules
+    paths:
+      - node_modules/
+    policy: pull
+lint:
+  stage: quality
+  script:
+    - npm run lint
+  cache:
+    key: modules
+    paths:
+      - node_modules/
+    policy: pull

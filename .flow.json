@@ -1,6 +1,3 @@
 {
-  "projectType": "npm",
-  "gitlab": {
-    "projectId": 2
-  }
+	"projectType": "npm"
 }
