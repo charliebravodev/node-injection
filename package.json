@@ -1,6 +1,6 @@
 {
   "name": "@hashstack/node-injection",
-  "version": "1.1.0-dev",
+  "version": "1.2.0-dev",
   "description": "Dependency / service injection for NodeJS and TypeScript.",
   "keywords": [
     "node",
