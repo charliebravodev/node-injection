@@ -19,7 +19,7 @@
     "definition": "./dist/node-injection.d.ts"
   },
   "scripts": {
-    "test": "nyc mocha && mv ./coverage/coverage-final.json ./coverage/coverage.json",
+    "test": "nyc mocha",
     "test:watch": "mocha --watch",
     "lint": "tslint -c tslint.json \"src/**/*.ts\" -e \"**/**/*.spec.ts\" && tslint -c tslint-test.json \"src/**/*.spec.ts\" && tslint -c tslint-test.json \"test/**/*.ts\"",
     "build": "export DTS=true && webpack",
