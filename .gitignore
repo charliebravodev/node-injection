@@ -38,3 +38,4 @@ test/**/*.js
 # For npm pack
 *.tgz
 .gitlab-ci.yml
+/coverage.lcov
