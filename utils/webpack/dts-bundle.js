@@ -4,7 +4,7 @@ function DtsBundlePlugin() {
 DtsBundlePlugin.prototype.apply = function (compiler) {
 	compiler.plugin('done', function () {
 		var dts = require('dts-bundle');
-		var removeDirectories = require('remove-empty-directories');
+		var removeEmptyDirectories = require('remove-empty-directories');
 
 		dts.bundle({
 			name: 'node-injection',
@@ -16,7 +16,7 @@ DtsBundlePlugin.prototype.apply = function (compiler) {
 		});
 
 		// Needed because dts-bundle removes source files and leavs empty directories
-		removeDirectories('dist/');
+		removeEmptyDirectories('dist/');
 	});
 };
 

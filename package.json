@@ -1,7 +1,7 @@
 {
   "name": "@hashstack/node-injection",
   "version": "1.2.0-dev",
-  "description": "Dependency / service injection for NodeJS and TypeScript.",
+  "description": "Decorator based dependency / service injection for NodeJS and TypeScript inspired from Angular and Spring.",
   "keywords": [
     "node",
     "dependency",
@@ -10,7 +10,9 @@
     "component",
     "container",
     "javascript",
-    "typescript"
+    "typescript",
+    "angular",
+    "spring"
   ],
   "repository": "https://github.com/charliebravodev/node-injection",
   "main": "./dist/node-injection.js",
@@ -23,7 +25,7 @@
     "test:watch": "mocha --watch",
     "lint": "tslint -c tslint.json \"src/**/*.ts\" -e \"**/**/*.spec.ts\" && tslint -c tslint-test.json \"src/**/*.spec.ts\" && tslint -c tslint-test.json \"test/**/*.ts\"",
     "build": "export DTS=true && webpack",
-    "build:watch": "&& webpack --watch ",
+    "build:watch": "webpack --watch ",
     "ci": "npm run build && npm run test && npm run lint"
   },
   "author": "Geoffroy Empain",
@@ -79,7 +81,8 @@
     ],
     "reporter": [
       "text-summary",
-      "html"
+      "html",
+      "json"
     ],
     "sourceMap": true,
     "instrument": true,
