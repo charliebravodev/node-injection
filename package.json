@@ -25,7 +25,7 @@
     "test:watch": "mocha --watch",
     "lint": "tslint -c tslint.json \"src/**/*.ts\" -e \"**/**/*.spec.ts\" && tslint -c tslint-test.json \"src/**/*.spec.ts\" && tslint -c tslint-test.json \"test/**/*.ts\"",
     "build": "export DTS=true && webpack",
-    "build:watch": "&& webpack --watch ",
+    "build:watch": "webpack --watch ",
     "ci": "npm run build && npm run test && npm run lint"
   },
   "author": "Geoffroy Empain",
