@@ -1,6 +1,6 @@
 {
   "name": "@hashstack/node-injection",
-  "version": "1.1.0",
+  "version": "1.1.1-dev",
   "description": "Decorator based dependency / service injection for NodeJS and TypeScript inspired from Angular and Spring.",
   "keywords": [
     "node",
